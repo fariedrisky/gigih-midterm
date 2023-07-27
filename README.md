@@ -254,4 +254,4 @@ with json body:
 ```
 
 ### Get comment data
-`GET http://localhost:3000/comment/0`
+`GET http://localhost:3000/comments/0`
