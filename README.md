@@ -52,7 +52,34 @@
            {<urlImageThumb>}
          ]
 }
+``` 
+**POST /videos/add**
+----
+  Add a new thumbnail to homepage.
+* **URL Params**  
+  None
+* **Headers**  
+  Content-Type: application/json  
+* **Data Params**  
 ```
+  {
+    videoID: string,
+    urlImageThumb: string
+  }
+```
+* **Success Response:**  
+* **Code:** 200  
+  **Content:**  
+  ```
+  {
+    videoID: string,
+    urlImageThumb: string
+  }
+
+* **Error Response:**  
+* **Code:** 500  
+**Content:** `{ error : error : "Failed to save Thumbnail" }`
+  
 **GET /products/:videoID**
 ----
   Returns the products from video thumbnail.
@@ -82,66 +109,8 @@
   OR  
   * **Code:** 500  
   **Content:** `{ error : error : "Internal Server Error" }`
-  
-**GET /comment/:videoID**
-----
-  Returns the comments from video thumbnail.
-* **URL Params**  
-  *Required:* `videoID=[string]`
-* **Data Params**  
-  None
-* **Headers**  
-  Content-Type: application/json  
-* **Success Response:** 
-* **Code:** 200  
-  **Content:**  
-  ```
-  {
-  products: [
-           {<videoID>},
-           {<username>},
-          {<comment>},
-          {<timestamp>}
-         ]
-}
 
-* **Error Response:**  
-  * **Code:** 404  
-  **Content:** `{ error : "Thumbnail not found" }`  
-  OR  
-  * **Code:** 500  
-  **Content:** `{ error : error : "Internal Server Error" }`
-  
-  
-  **POST /videos/add**
-----
-  Add a new thumbnail to homepage.
-* **URL Params**  
-  None
-* **Headers**  
-  Content-Type: application/json  
-* **Data Params**  
-```
-  {
-    videoID: string,
-    urlImageThumb: string
-  }
-```
-* **Success Response:**  
-* **Code:** 200  
-  **Content:**  
-  ```
-  {
-    videoID: string,
-    urlImageThumb: string
-  }
-
-* **Error Response:**  
-* **Code:** 500  
-**Content:** `{ error : error : "Failed to save Thumbnail" }`
-  
-  
-**POST /products/add**
+  **POST /products/add**
 ----
   Add a new product to video details.
 * **URL Params**  
@@ -174,6 +143,34 @@
 * **Code:** 500  
 **Content:** `{ error : error : "Failed to save Product" }`
 
+**GET /comment/:videoID**
+----
+  Returns the comments from video thumbnail.
+* **URL Params**  
+  *Required:* `videoID=[string]`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json  
+* **Success Response:** 
+* **Code:** 200  
+  **Content:**  
+  ```
+  {
+  products: [
+           {<videoID>},
+           {<username>},
+          {<comment>},
+          {<timestamp>}
+         ]
+}
+
+* **Error Response:**  
+  * **Code:** 404  
+  **Content:** `{ error : "Thumbnail not found" }`  
+  OR  
+  * **Code:** 500  
+  **Content:** `{ error : error : "Internal Server Error" }`
 
 **POST /comments/add**
 ----
@@ -204,8 +201,7 @@
 * **Code:** 500  
 **Content:** `{ error : error : "Failed to save Product" }`
 
-
-## How to run in local
+## HOW TO RUN IN YOUR LOCAL
 ### required module:
 ```
 dotenv
