@@ -47,7 +47,7 @@
   **Content:**  
 ```
 {
-  thumbnail: [
+  videos: [
            {<videoID>},
            {<urlImageThumb>}
          ]
@@ -64,9 +64,10 @@
   Content-Type: application/json  
 * **Success Response:** 
 * **Code:** 200  
-  **Content:**  ```
-{
-  product: [
+  **Content:**  
+  ```
+  {
+  products: [
             {<productID>},
             {<productLink>},
             {<title>},
@@ -74,7 +75,7 @@
             {<videoID>}
          ]
 }
-``` 
+
 * **Error Response:**  
   * **Code:** 404  
   **Content:** `{ error : "Thumbnail not found" }`  
@@ -93,16 +94,17 @@
   Content-Type: application/json  
 * **Success Response:** 
 * **Code:** 200  
-  **Content:**  ```
-{
-  product: [
+  **Content:**  
+  ```
+  {
+  products: [
            {<videoID>},
            {<username>},
-		   {<comment>},
-		   {<timestamp>}
+          {<comment>},
+          {<timestamp>}
          ]
 }
-``` 
+
 * **Error Response:**  
   * **Code:** 404  
   **Content:** `{ error : "Thumbnail not found" }`  
@@ -127,12 +129,13 @@
 ```
 * **Success Response:**  
 * **Code:** 200  
-  **Content:**  ```
+  **Content:**  
+  ```
   {
     videoID: string,
     urlImageThumb: string
   }
-``` 
+
 * **Error Response:**  
 * **Code:** 500  
 **Content:** `{ error : error : "Failed to save Thumbnail" }`
@@ -157,7 +160,8 @@
 ```
 * **Success Response:**  
 * **Code:** 200  
-  **Content:**  ```
+  **Content:** 
+   ```
   {
   productID: string
   productLink: string
@@ -165,7 +169,7 @@
   price: number
   videoID: string
   }
-``` 
+
 * **Error Response:**  
 * **Code:** 500  
 **Content:** `{ error : error : "Failed to save Product" }`
