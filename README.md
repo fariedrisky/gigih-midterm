@@ -110,7 +110,7 @@
   * **Code:** 500  
   **Content:** `{ error : error : "Internal Server Error" }`
 
-  **POST /products/add**
+**POST /products/add**
 ----
   Add a new product to video details.
 * **URL Params**  
@@ -120,11 +120,11 @@
 * **Data Params**  
 ```
   {
-  productID: string
-  productLink: string
-  title: string
-  price: number
-  videoID: string
+      productID: string
+      productLink: string
+      title: string
+      price: number
+      videoID: string
   }
 ```
 * **Success Response:**  
@@ -132,11 +132,11 @@
   **Content:** 
    ```
   {
-  productID: string
-  productLink: string
-  title: string
-  price: number
-  videoID: string
+      productID: string
+      productLink: string
+      title: string
+      price: number
+      videoID: string
   }
 
 * **Error Response:**  
@@ -163,7 +163,7 @@
           {<comment>},
           {<timestamp>}
          ]
-}
+  }
 
 * **Error Response:**  
   * **Code:** 404  
@@ -182,19 +182,19 @@
 * **Data Params**  
 ```
   {
-  videoID: string
-  username: string
-  comment: string
+      videoID: string
+      username: string
+      comment: string
   }
 ```
 * **Success Response:**  
 * **Code:** 200  
   **Content:**  ```
   {
-  videoID: string
-  username: string
-  comment: string
-  timestamps: datetime(iso 8601)
+      videoID: string
+      username: string
+      comment: string
+      timestamps: datetime(iso 8601)
   }
 
 * **Error Response:**  
@@ -210,6 +210,7 @@ mongoose
 ```
 
 ### start the server with:
+`npm install`
 `npm start`
 
 ### Post to video thumbnail DataBase using postman:
