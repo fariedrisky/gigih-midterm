@@ -95,13 +95,13 @@
   ```
   {
   products: [
-            {<productID>},
-            {<productLink>},
-            {<title>},
-            {<price>},
-            {<videoID>}
+              {<productID>},
+              {<productLink>},
+              {<title>},
+              {<price>},
+              {<videoID>}
          ]
-}
+  }
 
 * **Error Response:**  
   * **Code:** 404  
