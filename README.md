@@ -158,10 +158,10 @@
   ```
   {
   products: [
-           {<videoID>},
-           {<username>},
-          {<comment>},
-          {<timestamp>}
+              {<videoID>},
+              {<username>},
+              {<comment>},
+              {<timestamp>}
          ]
   }
 
